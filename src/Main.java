@@ -7,7 +7,7 @@ public class Main {
         String[] content = new String[2000];    // string / integer value depends on input file
         StringBuilder path = new StringBuilder(System.getProperty("user.dir"));
         path.append('\\');
-        path.append("input2.txt");   // open file
+        path.append("input3.txt");   // open file
         File f = new File(path.toString());
         Scanner sc = new Scanner(f);
         int i = 0;
@@ -16,8 +16,8 @@ public class Main {
             content[i] = data;
             i++;
         }
-        System.out.println(DAY2.first(content));
-        System.out.println(DAY2.seond(content));
+        System.out.println(DAY3.first(content));
+        System.out.println(DAY3.second(content));
 
     }
 }
