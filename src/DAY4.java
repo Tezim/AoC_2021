@@ -1,5 +1,3 @@
-package sk.stuba;
-
 import java.util.HashMap;
 
 public class DAY4 {
