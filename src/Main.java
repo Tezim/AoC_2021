@@ -1,11 +1,12 @@
-import Days.DAY5;
+
+import Days.DAY6;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         String[] content = new String[3000];    // string / integer value depends on input file
         StringBuilder path = new StringBuilder(System.getProperty("user.dir"));
         path.append('\\');
@@ -13,14 +14,9 @@ public class Main {
         File f = new File(path.toString());
         Scanner sc = new Scanner(f);
         int i = 0;
-        while(sc.hasNext()){
-            String data  = sc.next();
-            if (data != null){
-              content[i] = data;
-            i++;}
-        }
-        DAY5 d = new DAY5();
-        d.first(content);
+        String input = sc.next();
+        DAY6 d = new DAY6();
+        d.first(input);
 
 
     }
