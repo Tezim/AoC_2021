@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Reader {
 
     public static int[] integerContent = new int[1000];
-    public static String[] stringContent = new String[1000];
+    public static String[] stringContent = new String[10000];
 
     public static File openFile(String path){
         return new File(path);
@@ -21,8 +21,10 @@ public class Reader {
     }
     public static void readStr(File f) throws FileNotFoundException {
         Scanner sc = new Scanner(f);
-        String input = sc.next();
-        stringContent = input.split(",");
+        int i = 0;
+        while(sc.hasNext())
+            stringContent[i++] = sc.nextLine();
+        //stringContent = input.split(" ");
     }
 
 }
