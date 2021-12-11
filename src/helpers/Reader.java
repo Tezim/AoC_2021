@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Reader {
 
-    public static int[] integerContent = new int[1000];
+    public static int[][] integerContent = new int[10][10];
     public static String[] stringContent = new String[110];
 
     public static File openFile(String path){
@@ -14,10 +14,15 @@ public class Reader {
     }
     public static void readInt(File f) throws FileNotFoundException {
         Scanner sc = new Scanner(f);
-        String[] input = sc.next().split(",");
-        int i = 0;
-        for (String s : input)
-           integerContent[i++] = Integer.parseInt(s);
+        String input  = "";
+        int j = 0;
+        while(j < 10) {
+            input = sc.next();
+            for (int i = 0; i < 10; i++) {
+                integerContent[j][i] = Integer.parseInt(input.charAt(i) + "");
+            }
+            j++;
+        }
     }
     public static void readStr(File f) throws FileNotFoundException {
         Scanner sc = new Scanner(f);
