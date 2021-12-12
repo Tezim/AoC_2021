@@ -1,4 +1,4 @@
-import Days.DAY11;
+import Days.DAY12;
 import helpers.Reader;
 import java.io.IOException;
 
@@ -6,12 +6,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         StringBuilder path = new StringBuilder(System.getProperty("user.dir"));
         path.append('\\');
-        path.append("files\\input11.txt");   // open file
+        path.append("files\\input12.txt");   // open file
 
-        Reader.readInt(Reader.openFile(path.toString()));
-        //Reader.readStr(Reader.openFile(path.toString()));
+        //Reader.readInt(Reader.openFile(path.toString()));
+        Reader.readStr(Reader.openFile(path.toString()));
 
-        DAY11 d = new DAY11();
-        d.solve(Reader.integerContent);
+        DAY12 d = new DAY12();
+        d.solve(Reader.stringContent);
     }
 }
