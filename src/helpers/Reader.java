@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Reader {
 
     public static int[][] integerContent = new int[10][10];
-    public static String[] stringContent = new String[21];
+    public static String[] stringContent = new String[871];
+   // public static String[] stringContent = new String[24];
 
     public static File openFile(String path){
         return new File(path);
@@ -27,9 +28,10 @@ public class Reader {
     public static void readStr(File f) throws FileNotFoundException {
         Scanner sc = new Scanner(f);
         int i = 0;
-        for(;i<21;i++){
-            stringContent[i] = sc.next();
+       for(;i<871;i++){
+           stringContent[i] = sc.next();
         }
+
     }
 
 }
