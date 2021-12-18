@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Reader {
 
     public static Node[][] integerContent = new Node[100][100];
-    public static String[] stringContent = new String[102];
+    public static String stringContent ="";
    // public static String[] stringContent = new String[24];
 
     public static File openFile(String path){
@@ -29,11 +29,7 @@ public class Reader {
     }
     public static void readStr(File f) throws FileNotFoundException {
         Scanner sc = new Scanner(f);
-        int i = 0;
-       for(;i<102;i++){
-           stringContent[i] = sc.nextLine();
-        }
-
+        stringContent = sc.nextLine();
     }
 
 }
